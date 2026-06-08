@@ -1,0 +1,215 @@
+.student-dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  animation: fadeIn 0.4s ease;
+}
+
+.dashboard-welcome h2 {
+  font-size: var(--font-size-2xl);
+  font-weight: 800;
+  margin: 0 0 var(--space-1) 0;
+  color: var(--text-primary);
+}
+
+.dashboard-welcome p {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Row de Stats Cards */
+.stats-grid-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+}
+
+/* Grid Central */
+.dashboard-main-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--space-6);
+  align-items: start;
+}
+
+.chart-card {
+  height: 380px;
+}
+
+.chart-header {
+  margin-bottom: var(--space-4);
+}
+
+.chart-header h4 {
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  margin: 0 0 2px 0;
+}
+
+.chart-header p {
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.chart-wrapper {
+  height: 250px;
+  position: relative;
+}
+
+.empty-chart-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: var(--space-3);
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.empty-chart-state svg {
+  color: var(--text-muted);
+  opacity: 0.5;
+}
+
+.empty-chart-state p {
+  font-size: var(--font-size-sm);
+  max-width: 320px;
+  margin: 0 0 var(--space-2) 0;
+}
+
+/* Ações Rápidas */
+.quick-actions-header {
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--glass-border);
+  margin-bottom: var(--space-4);
+}
+
+.quick-actions-header h4 {
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  margin: 0;
+}
+
+.quick-actions-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.action-button-item {
+  width: 100%;
+  background: var(--bg-secondary);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  cursor: pointer;
+  text-align: left;
+  transition: all var(--transition-fast);
+  color: var(--text-primary);
+}
+
+.action-button-item:hover {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: var(--color-primary-500);
+  transform: translateX(3px);
+}
+
+.action-icon-box {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.action-icon-box.bg-blue { background: rgba(59, 130, 246, 0.1); color: var(--color-primary-500); }
+.action-icon-box.bg-orange { background: rgba(245, 158, 11, 0.1); color: var(--color-warning); }
+.action-icon-box.bg-green { background: rgba(16, 185, 129, 0.1); color: var(--color-success); }
+
+.action-info h5 {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  margin: 0 0 2px 0;
+}
+
+.action-info p {
+  font-size: var(--font-size-xs);
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Tabelas */
+.recent-exams-card {
+  margin-top: var(--space-2);
+}
+
+.card-header-with-action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-4);
+}
+
+.card-title {
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  margin: 0;
+}
+
+.view-all-link {
+  font-size: var(--font-size-xs);
+  color: var(--color-primary-500);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.view-all-link:hover {
+  text-decoration: underline;
+}
+
+.exam-title-cell {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.nota-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: var(--font-size-xs);
+}
+
+.nota-badge.high { background: rgba(16, 185, 129, 0.15); color: var(--color-success); }
+.nota-badge.medium { background: rgba(245, 158, 11, 0.15); color: var(--color-warning); }
+.nota-badge.low { background: rgba(239, 68, 68, 0.15); color: var(--color-danger); }
+
+@media (max-width: 992px) {
+  .stats-grid-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .dashboard-main-grid {
+    grid-template-columns: 1fr;
+  }
+  .chart-card {
+    height: 340px;
+  }
+}
+
+@media (max-width: 576px) {
+  .stats-grid-row {
+    grid-template-columns: 1fr;
+  }
+  .card-header-with-action {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-2);
+  }
+}

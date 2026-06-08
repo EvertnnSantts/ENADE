@@ -1,0 +1,279 @@
+.exam-take-page {
+  animation: fadeIn 0.4s ease;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 1. Intro Card Styles */
+.exam-intro-card {
+  max-width: 680px;
+  margin: var(--space-8) auto;
+  padding: var(--space-8) !important;
+}
+
+.exam-icon-large {
+  width: 72px;
+  height: 72px;
+  border-radius: var(--radius-xl);
+  background: rgba(59, 130, 246, 0.1);
+  color: var(--color-primary-500);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-4) auto;
+  border: 1px solid rgba(59, 130, 246, 0.15);
+}
+
+.exam-icon-large.text-warning {
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--color-warning);
+  border-color: rgba(245, 158, 11, 0.15);
+}
+
+.exam-intro-header h2 {
+  font-size: var(--font-size-2xl);
+  font-weight: 800;
+  margin: 0 0 var(--space-2) 0;
+}
+
+.exam-area-text {
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+  margin-bottom: var(--space-6);
+}
+
+.exam-info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+  background: var(--bg-secondary);
+  border: 1px solid var(--glass-border);
+  padding: var(--space-4);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-6);
+  text-align: center;
+}
+
+.info-block span {
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.info-block h4 {
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  margin: var(--space-1) 0 0 0;
+  color: var(--text-primary);
+}
+
+.exam-instructions h5 {
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  margin: 0 0 var(--space-2) 0;
+}
+
+.exam-instructions ul {
+  padding-left: var(--space-4);
+  margin: 0 0 var(--space-8) 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.exam-intro-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-4);
+  border-top: 1px solid var(--glass-border);
+  padding-top: var(--space-6);
+}
+
+/* 2. Taking Mode Layout */
+.exam-taking-layout {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: var(--space-6);
+  align-items: start;
+}
+
+.exam-content-side {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.exam-taking-header {
+  padding: var(--space-4) var(--space-6);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--glass-border);
+  background: rgba(30, 41, 59, 0.4);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.exam-taking-info h3 {
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  margin: 0 0 2px 0;
+  color: var(--text-primary);
+}
+
+.question-indicator {
+  font-size: var(--font-size-xs);
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.exam-taking-controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.exam-taking-footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--glass-border);
+  padding-top: var(--space-4);
+}
+
+.force-review-btn {
+  margin-top: var(--space-4);
+}
+
+/* 3. Review Card Styles */
+.exam-review-card {
+  max-width: 800px;
+  margin: var(--space-6) auto;
+  padding: var(--space-8) !important;
+}
+
+.review-header h2 {
+  font-size: var(--font-size-2xl);
+  font-weight: 800;
+  margin: 0 0 var(--space-2) 0;
+}
+
+.review-header p {
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+  margin-bottom: var(--space-6);
+}
+
+.review-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+}
+
+.rev-stat-box {
+  background: var(--bg-secondary);
+  border: 1px solid var(--glass-border);
+  padding: var(--space-4);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.rev-stat-box .number {
+  font-size: var(--font-size-2xl);
+  font-weight: 800;
+  margin-bottom: 2px;
+}
+
+.rev-stat-box .label {
+  font-size: var(--font-size-xs);
+  color: var(--text-secondary);
+}
+
+.review-question-list h4 {
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  margin: 0 0 var(--space-4) 0;
+  border-bottom: 1px solid var(--glass-border);
+  padding-bottom: var(--space-2);
+}
+
+.review-question-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3);
+  margin-bottom: var(--space-8);
+  max-height: 300px;
+  overflow-y: auto;
+  padding-right: var(--space-2);
+}
+
+.review-grid-btn {
+  background: var(--bg-secondary);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+  color: var(--text-primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  text-align: left;
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  transition: all var(--transition-fast);
+}
+
+.review-grid-btn:hover {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: var(--color-primary-500);
+}
+
+.review-grid-btn.flagged { border-color: var(--color-warning); background: rgba(245, 158, 11, 0.05); }
+.review-grid-btn.answered { border-color: var(--color-success); background: rgba(16, 185, 129, 0.05); }
+.review-grid-btn.empty { border-color: var(--color-danger); background: rgba(239, 68, 68, 0.05); }
+
+.badge-status {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+}
+
+.review-grid-btn.flagged .badge-status { background: rgba(245, 158, 11, 0.15); color: var(--color-warning); }
+.review-grid-btn.answered .badge-status { background: rgba(16, 185, 129, 0.15); color: var(--color-success); }
+.review-grid-btn.empty .badge-status { background: rgba(239, 68, 68, 0.15); color: var(--color-danger); }
+
+.review-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-4);
+  border-top: 1px solid var(--glass-border);
+  padding-top: var(--space-6);
+}
+
+@media (max-width: 992px) {
+  .exam-taking-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .exam-info-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2);
+  }
+  .review-stats {
+    grid-template-columns: 1fr;
+  }
+  .review-question-grid {
+    grid-template-columns: 1fr;
+  }
+}

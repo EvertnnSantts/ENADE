@@ -1,0 +1,119 @@
+.provas-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.page-actions-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.filters-wrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  flex: 1;
+}
+
+.filters-wrapper .search-bar {
+  position: relative;
+  flex: 1;
+  max-width: 360px;
+}
+
+.filters-wrapper .search-bar .input-container {
+  margin: 0;
+}
+
+.filters-wrapper .search-bar input {
+  padding-left: 40px;
+}
+
+.filters-wrapper .search-icon {
+  position: absolute;
+  left: var(--space-3);
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+.select-filters {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.select-filters .select-container {
+  margin: 0;
+  min-width: 150px;
+}
+
+.clear-filters-btn {
+  background: none;
+  border: none;
+  color: var(--color-danger);
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+  cursor: pointer;
+  padding: var(--space-1) var(--space-2);
+  transition: opacity var(--transition-fast);
+}
+
+.clear-filters-btn:hover {
+  opacity: 0.8;
+}
+
+.provas-table-card {
+  border: 1px solid var(--glass-border) !important;
+  background: rgba(255, 255, 255, 0.01) !important;
+}
+
+.exam-info-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.exam-info-cell strong {
+  font-size: var(--font-size-sm);
+  color: var(--text-primary);
+}
+
+.exam-meta-cell {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-xs);
+  color: var(--text-secondary);
+}
+
+.exam-meta-cell.center {
+  justify-content: center;
+}
+
+.actions-cell {
+  display: flex;
+  gap: var(--space-2);
+  justify-content: flex-end;
+}
+
+@media (max-width: 992px) {
+  .page-actions-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .filters-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .filters-wrapper .search-bar {
+    max-width: 100%;
+  }
+  .select-filters {
+    flex-wrap: wrap;
+  }
+}

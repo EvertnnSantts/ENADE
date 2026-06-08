@@ -1,0 +1,142 @@
+.question-card {
+  margin-bottom: var(--space-6);
+}
+
+.question-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--glass-border);
+  margin-bottom: var(--space-4);
+}
+
+.question-number {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.question-badges {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.question-enunciado {
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  color: var(--text-primary);
+  margin-bottom: var(--space-6);
+  white-space: pre-line; /* Mantém quebras de linha do enunciado */
+}
+
+.alternatives-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.alternative-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  background: var(--bg-secondary);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  text-align: left;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  color: var(--text-primary);
+  width: 100%;
+}
+
+.alternative-item:hover {
+  background: rgba(255, 255, 255, 0.02);
+  border-color: var(--color-primary-500);
+}
+
+.alternative-item.selected {
+  background: rgba(59, 130, 246, 0.08);
+  border-color: var(--color-primary-500);
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.1);
+}
+
+.alternative-letter {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--bg-input);
+  border: 1px solid var(--glass-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  flex-shrink: 0;
+  transition: all var(--transition-fast);
+}
+
+.alternative-item:hover .alternative-letter {
+  color: var(--color-primary-500);
+  border-color: var(--color-primary-500);
+}
+
+.alternative-item.selected .alternative-letter {
+  background: var(--color-primary-500);
+  color: white;
+  border-color: var(--color-primary-500);
+}
+
+.alternative-text {
+  font-size: var(--font-size-sm);
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.alternative-item.selected .alternative-text {
+  color: var(--text-primary);
+}
+
+/* Estilos de Redação / Discursiva */
+.essay-area {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.essay-label {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.essay-textarea {
+  width: 100%;
+  background: var(--bg-secondary);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  line-height: 1.5;
+  resize: vertical;
+  transition: all var(--transition-fast);
+}
+
+.essay-textarea:focus {
+  outline: none;
+  border-color: var(--color-primary-500);
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+.essay-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+}

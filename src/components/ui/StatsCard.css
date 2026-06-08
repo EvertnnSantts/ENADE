@@ -1,0 +1,91 @@
+.stats-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.stats-card-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.stats-card-main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.stats-card-title {
+  font-size: var(--font-size-xs);
+  color: var(--text-secondary);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 var(--space-2) 0;
+}
+
+.stats-card-value {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1.1;
+}
+
+.stats-card-footer {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+  font-size: var(--font-size-xs);
+}
+
+.stats-card-trend {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+}
+
+.trend-positive {
+  color: var(--color-success);
+  background: rgba(16, 185, 129, 0.1);
+}
+
+.trend-negative {
+  color: var(--color-danger);
+  background: rgba(239, 68, 68, 0.1);
+}
+
+.stats-card-desc {
+  color: var(--text-muted);
+}
+
+.stats-card-icon-wrapper {
+  background: rgba(59, 130, 246, 0.08);
+  color: var(--color-primary-500);
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(59, 130, 246, 0.15);
+  transition: all var(--transition-base);
+}
+
+.stats-card:hover .stats-card-icon-wrapper {
+  background: var(--color-primary-600);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(37, 99, 235, 0.4);
+}
+
+/* Glass variant specifics */
+.stats-card-glass .stats-card-icon-wrapper {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+}
